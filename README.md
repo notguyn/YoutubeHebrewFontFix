@@ -4,6 +4,12 @@ A small browser extension and userscript that restores Hebrew text on YouTube
 to Arial while leaving English and other writing systems in YouTube's original
 fonts.
 
+## Before and after
+
+| Before | After |
+| --- | --- |
+| ![YouTube Hebrew text before the font fix](docs/images/before.png) | ![YouTube Hebrew text after the font fix](docs/images/after.png) |
+
 ## Install locally
 
 1. Open `chrome://extensions` in Chrome.
