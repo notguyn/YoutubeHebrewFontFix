@@ -1,0 +1,157 @@
+:root {
+  color-scheme: light dark;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  width: 300px;
+  margin: 0;
+  color: #0f0f0f;
+  background: #fff;
+}
+
+main {
+  padding: 18px;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-bottom: 18px;
+}
+
+.logo {
+  display: grid;
+  width: 38px;
+  height: 30px;
+  place-items: center;
+  border-radius: 9px;
+  color: #fff;
+  background: #f00;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 16px;
+}
+
+.heading p {
+  margin-top: 2px;
+  color: #606060;
+  font-size: 12px;
+}
+
+.toggle-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.toggle-row input {
+  position: absolute;
+  opacity: 0;
+}
+
+.toggle {
+  position: relative;
+  flex: 0 0 auto;
+  width: 38px;
+  height: 22px;
+  border-radius: 999px;
+  background: #909090;
+  transition: background 120ms ease;
+}
+
+.toggle::after {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  content: "";
+  transition: transform 120ms ease;
+}
+
+input:checked + .toggle {
+  background: #f00;
+}
+
+input:checked + .toggle::after {
+  transform: translateX(16px);
+}
+
+input:focus-visible + .toggle {
+  outline: 2px solid #065fd4;
+  outline-offset: 2px;
+}
+
+.field {
+  display: grid;
+  gap: 7px;
+  margin-top: 18px;
+  color: #606060;
+  font-size: 12px;
+}
+
+select {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #d3d3d3;
+  border-radius: 8px;
+  color: #0f0f0f;
+  background: #fff;
+  font: inherit;
+  font-size: 14px;
+}
+
+.preview {
+  margin-top: 16px;
+  color: #606060;
+  font-size: 12px;
+}
+
+.preview [lang="he"] {
+  color: #0f0f0f;
+  font: 15px Arial, sans-serif;
+}
+
+.status {
+  height: 14px;
+  margin-top: 8px;
+  color: #2ba640;
+  font-size: 11px;
+}
+
+@media (prefers-color-scheme: dark) {
+  body,
+  select {
+    color: #f1f1f1;
+    background: #212121;
+  }
+
+  select {
+    border-color: #606060;
+  }
+
+  .heading p,
+  .field,
+  .preview {
+    color: #aaa;
+  }
+
+  .preview [lang="he"] {
+    color: #f1f1f1;
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Hebrew Font Fix",
+  "version": "1.0.0",
+  "description": "Restores YouTube's Hebrew text to Arial without changing English text.",
+  "permissions": [
+    "storage"
+  ],
+  "action": {
+    "default_title": "YouTube Hebrew Font Fix",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/*",
+        "https://m.youtube.com/*"
+      ],
+      "css": [
+        "content.css"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_start"
+    }
+  ]
+}

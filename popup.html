@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>YouTube Hebrew Font Fix</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main>
+      <div class="heading">
+        <div class="logo" aria-hidden="true">א</div>
+        <div>
+          <h1>Hebrew Font Fix</h1>
+          <p>YouTube only</p>
+        </div>
+      </div>
+
+      <label class="toggle-row">
+        <span>Use the classic Hebrew font</span>
+        <input id="enabled" type="checkbox">
+        <span class="toggle" aria-hidden="true"></span>
+      </label>
+
+      <label class="field" for="font">
+        Hebrew font
+        <select id="font">
+          <option value="arial">Arial (classic)</option>
+          <option value="tahoma">Tahoma</option>
+        </select>
+      </label>
+
+      <p class="preview"><span lang="he" dir="rtl">שלום עולם</span> · English stays the same</p>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
